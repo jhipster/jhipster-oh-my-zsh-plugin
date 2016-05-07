@@ -6,21 +6,32 @@ This plugin provides [JHipster](http://jhipster.github.io/) shortcuts commands f
 
 Our plan is to add this plugin to the [official plugin list](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins).
 
-## Usage
+## Installation
 
-You need to add `jhipster` in your plugin list in your `.zshrc` file. For example:
+jhipster can be used with [oh-my-zsh](http://ohmyz.sh/)-compatible zsh frameworks.
 
-    plugins=(git docker docker-compose jhipster)
+### Antigen
 
-And then you need to install the plugin itself, as it's not yet part of the official plugin list.
+If you're using [Antigen](https://github.com/zsh-users/antigen):
 
-### Quick installation
+1. Add `antigen bundle jhipster/jhipster-oh-my-zsh-plugin` to your `.zshrc` where you've listed your other plugins.
+2. Close and reopen your Terminal/iTerm window to **refresh context** and use the plugin. Alternatively, you can run `antigen bundle jhipster/jhipster-oh-my-zsh-plugin` in a running shell to have antigen clone and load *jhipster*.
 
-Just run:
+### oh-my-zsh
 
-    cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/jhipster/jhipster-oh-my-zsh-plugin.git jhipster && cd ~ && . ~/.zshrc
+If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
 
-### Detailed installation
+1. Edit your `~/.zshrc` and add `jhipster` – same as clone directory – to the list of plugins to enable:
 
-- Clone this repository in your `~/.oh-my-zsh/custom/plugins` directory, using the `jhipster` directory name for storing this plugin
-- Reload your oh-my-zsh configuration by running `. ~/.zshrc` in your home directory
+    `plugins=( ... jhipster )`
+
+2. In the command line, change to _oh-my-zsh_'s custom plugin directory and clone the repository:
+
+    `cd ~/.oh-my-zsh/custom/plugins && git clone https://github.com/jhipster/jhipster-oh-my-zsh-plugin.git jhipster && cd && . ~/.zshrc`
+
+### zgen
+
+If you're using [zgen](https://github.com/tarjoilija/zgen):
+
+1. Add `zgen load jhipster/jhipster-oh-my-zsh-plugin` to your `.zshrc` along with your other `zgen load` commands.
+2. `rm ${ZGEN_INIT}/init.zsh && zgen save`
