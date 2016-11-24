@@ -53,6 +53,10 @@ jhgatling() {
     fi
 }
 
+alias jhappup='docker-compose -f src/main/docker/app.yml up -d'
+alias jhappdown='docker-compose -f src/main/docker/app.yml down'
+alias jhappstop='docker-compose -f src/main/docker/app.yml stop'
+alias jhapplogs='docker-compose -f src/main/docker/app.yml logs --follow'
 alias jhmysqlup='docker-compose -f src/main/docker/mysql.yml up -d'
 alias jhmysqldown='docker-compose -f src/main/docker/mysql.yml down'
 alias jhmysqlstop='docker-compose -f src/main/docker/mysql.yml stop'
