@@ -2,6 +2,7 @@ alias jh='yo jhipster'
 alias jhyarn='yo jhipster --yarn'
 alias jhskip='yo jhipster --skip-install'
 alias jhinstall='npm install && bower install && gulp install'
+alias jhupgrade='yo jhipster:upgrade'
 alias jhf='yo jhipster --force'
 alias jhfe='yo jhipster --force --with-entities'
 
