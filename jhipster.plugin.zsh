@@ -12,6 +12,7 @@ alias jhs='yo jhipster:service'
 alias jhlang='yo jhipster:languages'
 alias jhinfo='yo jhipster:info'
 alias jhcompose='yo jhipster:docker-compose'
+alias jhrancher='yo jhipster:rancher-compose'
 alias jhcicd='yo jhipster:ci-cd'
 
 alias jhcf='yo jhipster:cloudfoundry'
