@@ -1,4 +1,3 @@
-alias jh='yo jhipster'
 alias jhyarn='yo jhipster --yarn'
 alias jhskip='yo jhipster --skip-install'
 alias jhinstall='npm install && bower install && gulp install'
