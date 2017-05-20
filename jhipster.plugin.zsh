@@ -1,57 +1,72 @@
-alias jhyarn='yo jhipster --yarn'
-alias jhskip='yo jhipster --skip-install'
-alias jhinstall='npm install && bower install && gulp install'
-alias jhupgrade='yo jhipster:upgrade'
-alias jhf='yo jhipster --force'
-alias jhfe='yo jhipster --force --with-entities'
 
-alias jhjdl='yo jhipster:import-jdl'
-alias jhe='yo jhipster:entity'
-alias jhs='yo jhipster:service'
-alias jhlang='yo jhipster:languages'
-alias jhinfo='yo jhipster:info'
-alias jhcompose='yo jhipster:docker-compose'
-alias jhrancher='yo jhipster:rancher-compose'
-alias jhcicd='yo jhipster:ci-cd'
+alias jh='jhipster'
+alias jhyarn='jhipster --yarn'
+alias jhnpm='jhipster --npm'
+alias jhskip='jhipster --skip-install --skip-checks'
+alias jhf='jhipster --force'
+alias jhfe='jhipster --force --with-entities'
 
-alias jhcf='yo jhipster:cloudfoundry'
-alias jhheroku='yo jhipster:heroku'
-alias jhkubernetes='yo jhipster:kubernetes'
-alias jhaws='yo jhipster:aws'
+alias jhupgrade='jhipster upgrade'
+alias jhjdl='jhipster import-jdl'
+alias jhe='jhipster entity'
+alias jhs='jhipster service'
+alias jhlang='jhipster languages'
+alias jhinfo='jhipster info'
+alias jhcompose='jhipster docker-compose'
+alias jhrancher='jhipster rancher-compose'
+alias jhcicd='jhipster ci-cd'
+
+alias jhcf='jhipster cloudfoundry'
+alias jhheroku='jhipster heroku'
+alias jhkubernetes='jhipster kubernetes'
+alias jhaws='jhipster aws'
+alias jhopenshift='jhipster openshift'
+
+jhinstall() {
+    if [[ -a gulpfile.js ]]; then
+        yarn install && bower install && gulp install
+    elif [[ -a tsconfig.json ]]; then
+        yarn install
+    fi
+}
 
 jhclean() {
     if [[ -a mvnw ]]; then
         ./mvnw clean
-    else
-        ./gradlew clean
+    elif [[ -a gradlew ]]; then
+        ./gradlew clean --no-daemon
     fi
 }
+
 jhrun() {
     if [[ -a mvnw ]]; then
         ./mvnw spring-boot:run
-    else
-        ./gradlew bootRun
+    elif [[ -a gradlew ]]; then
+        ./gradlew bootRun --no-daemon
     fi
 }
+
 jhpack() {
     if [[ -a mvnw ]]; then
         ./mvnw -Pprod package
-    else
-        ./gradlew -Pprod bootRepackage
+    elif [[ -a gradlew ]]; then
+        ./gradlew -Pprod bootRepackage --no-daemon
     fi
 }
+
 jhdock() {
     if [[ -a mvnw ]]; then
         ./mvnw -Pprod package docker:build
-    else
-        ./gradlew -Pprod bootRepackage buildDocker
+    elif [[ -a gradlew ]]; then
+        ./gradlew -Pprod bootRepackage buildDocker --no-daemon
     fi
 }
+
 jhgatling() {
     if [[ -a mvnw ]]; then
         ./mvnw gatling:execute
-    else
-        ./gradlew gatlingRun
+    elif [[ -a gradlew ]]; then
+        ./gradlew gatlingRun  --no-daemon
     fi
 }
 
