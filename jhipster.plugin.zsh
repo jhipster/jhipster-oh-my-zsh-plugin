@@ -1,5 +1,6 @@
 
 alias jh='jhipster'
+alias jhlink='yarn link generator-jhipster'
 alias jhyarn='jhipster --yarn'
 alias jhnpm='jhipster --npm'
 alias jhskip='jhipster --skip-install --skip-checks'
