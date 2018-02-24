@@ -40,6 +40,14 @@ jhclean() {
     fi
 }
 
+jhsonar() {
+    if [[ -a mvnw ]]; then
+        ./mvnw clean test sonar:sonar
+    elif [[ -a gradlew ]]; then
+        ./gradlew clean test sonarqube
+    fi
+}
+
 jhrun() {
     if [[ -a mvnw ]]; then
         ./mvnw spring-boot:run
@@ -120,3 +128,7 @@ alias jhkeycloakup='docker-compose -f src/main/docker/keycloak.yml up -d'
 alias jhkeycloakdown='docker-compose -f src/main/docker/keycloak.yml down'
 alias jhkeycloakstop='docker-compose -f src/main/docker/keycloak.yml stop'
 alias jhkeycloaklogs='docker-compose -f src/main/docker/keycloak.yml logs --follow'
+alias jhsonarup='docker-compose -f src/main/docker/sonar.yml up -d'
+alias jhsonardown='docker-compose -f src/main/docker/sonar.yml down'
+alias jhsonarstop='docker-compose -f src/main/docker/sonar.yml stop'
+alias jhsonarlogs='docker-compose -f src/main/docker/sonar.yml logs --follow'
