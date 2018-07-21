@@ -72,14 +72,6 @@ jhdock() {
     fi
 }
 
-jhgatling() {
-    if [[ -a mvnw ]]; then
-        ./mvnw gatling:execute
-    elif [[ -a gradlew ]]; then
-        ./gradlew gatlingRun  --no-daemon
-    fi
-}
-
 alias jhappup='docker-compose -f src/main/docker/app.yml up -d'
 alias jhappdown='docker-compose -f src/main/docker/app.yml down'
 alias jhappstop='docker-compose -f src/main/docker/app.yml stop'
