@@ -1,8 +1,6 @@
-
 alias jh='jhipster'
-alias jhlink='yarn link generator-jhipster'
+alias jhlink='npm link generator-jhipster'
 alias jhyarn='jhipster --yarn'
-alias jhnpm='jhipster --npm'
 alias jhskip='jhipster --skip-install --skip-checks'
 alias jhf='jhipster --force'
 alias jhfe='jhipster --force --with-entities'
@@ -26,9 +24,9 @@ alias jhopenshift='jhipster openshift'
 
 jhinstall() {
     if [[ -a gulpfile.js ]]; then
-        yarn install && bower install && gulp install
+        npm install && bower install && gulp install
     elif [[ -a tsconfig.json ]]; then
-        yarn install
+        npm install
     fi
 }
 
