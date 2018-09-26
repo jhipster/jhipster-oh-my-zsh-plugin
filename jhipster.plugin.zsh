@@ -64,9 +64,9 @@ jhpack() {
 
 jhdock() {
     if [[ -a mvnw ]]; then
-        ./mvnw -Pprod package dockerfile:build
+        ./mvnw package -Pprod jib:dockerBuild
     elif [[ -a gradlew ]]; then
-        ./gradlew -Pprod bootWar buildDocker --no-daemon
+        ./gradlew bootWar -Pprod jibDockerBuild --no-daemon
     fi
 }
 
