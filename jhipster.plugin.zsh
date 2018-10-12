@@ -70,6 +70,10 @@ jhdock() {
     fi
 }
 
+jhgatling() {
+    gatling -sf src/test/gatling/user-files/simulations
+}
+
 alias jhappup='docker-compose -f src/main/docker/app.yml up -d'
 alias jhappdown='docker-compose -f src/main/docker/app.yml down'
 alias jhappstop='docker-compose -f src/main/docker/app.yml stop'
