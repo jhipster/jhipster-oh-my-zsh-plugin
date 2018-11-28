@@ -22,6 +22,9 @@ alias jhkubernetes='jhipster kubernetes'
 alias jhaws='jhipster aws'
 alias jhopenshift='jhipster openshift'
 
+alias jhkot='jhipster --blueprint kotlin'
+alias jhvue='jhipster --blueprint vuejs'
+
 jhinstall() {
     if [[ -a gulpfile.js ]]; then
         npm install && bower install && gulp install
