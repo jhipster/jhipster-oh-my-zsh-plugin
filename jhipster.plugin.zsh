@@ -43,9 +43,9 @@ jhclean() {
 
 jhsonar() {
     if [[ -a mvnw ]]; then
-        ./mvnw clean test sonar:sonar
+        ./mvnw clean verify sonar:sonar
     elif [[ -a gradlew ]]; then
-        ./gradlew clean test sonarqube
+        ./gradlew clean check sonarqube
     fi
 }
 
