@@ -96,6 +96,11 @@ alias jhpostgresqldown='docker-compose -f src/main/docker/postgresql.yml down'
 alias jhpostgresqlstop='docker-compose -f src/main/docker/postgresql.yml stop'
 alias jhpostgresqllogs='docker-compose -f src/main/docker/postgresql.yml logs --follow'
 
+alias jhmssqlup='docker-compose -f src/main/docker/mssql.yml up -d'
+alias jhmssqldown='docker-compose -f src/main/docker/mssql.yml down'
+alias jhmssqlstop='docker-compose -f src/main/docker/mssql.yml stop'
+alias jhmssqllogs='docker-compose -f src/main/docker/mssql.yml logs --follow'
+
 alias jhmongoup='docker-compose -f src/main/docker/mongodb.yml up -d'
 alias jhmongodown='docker-compose -f src/main/docker/mongodb.yml down'
 alias jhmongostop='docker-compose -f src/main/docker/mongodb.yml stop'
