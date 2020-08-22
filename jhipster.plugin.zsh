@@ -17,7 +17,7 @@ alias jhcicd='jhipster ci-cd'
 
 alias jhcf='jhipster cloudfoundry'
 alias jhheroku='jhipster heroku'
-alias jhkubernetes='jhipster kubernetes'
+alias jhk8s='jhipster kubernetes'
 alias jhaws='jhipster aws'
 alias jhopenshift='jhipster openshift'
 
