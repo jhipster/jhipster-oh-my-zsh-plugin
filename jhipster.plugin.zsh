@@ -126,6 +126,11 @@ alias jhregistrydown='docker-compose -f src/main/docker/jhipster-registry.yml do
 alias jhregistrystop='docker-compose -f src/main/docker/jhipster-registry.yml stop'
 alias jhregistrylogs='docker-compose -f src/main/docker/jhipster-registry.yml logs --follow'
 
+alias jhccup='docker-compose -f src/main/docker/jhipster-control-center.yml up -d'
+alias jhccdown='docker-compose -f src/main/docker/jhipster-control-center.yml down'
+alias jhccstop='docker-compose -f src/main/docker/jhipster-control-center.yml stop'
+alias jhcclogs='docker-compose -f src/main/docker/jhipster-control-center.yml logs --follow'
+
 alias jhkafkaup='docker-compose -f src/main/docker/kafka.yml up -d'
 alias jhkafkadown='docker-compose -f src/main/docker/kafka.yml down'
 alias jhkafkastop='docker-compose -f src/main/docker/kafka.yml stop'
