@@ -6,7 +6,7 @@ alias jhf='jhipster --force'
 alias jhfe='jhipster --force --with-entities'
 
 alias jhupgrade='jhipster upgrade'
-alias jhjdl='jhipster import-jdl'
+alias jhjdl='jhipster jdl'
 alias jhe='jhipster entity'
 alias jhs='jhipster service'
 alias jhcontroller='jhipster spring-controller'
